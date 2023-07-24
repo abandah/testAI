@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+<base-config cleartextTrafficPermitted="true"
+    tools:ignore="InsecureBaseConfiguration">
+    <trust-anchors>
+        <certificates src="system" />
+    </trust-anchors>
+</base-config>
+<domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">media2.livaat.com</domain>
+    <domain includeSubdomains="true">https://dashboard.popuppush.com/</domain>
+    <domain includeSubdomains="true">livaat-prod.s3.me-south-1.amazonaws.com</domain>
+    <domain includeSubdomains="true">api.dyntube.com</domain>
+    <trust-anchors>
+        <certificates src="system" />
+    </trust-anchors>
+</domain-config>
+</network-security-config>

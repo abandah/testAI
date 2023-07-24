@@ -1,0 +1,13 @@
+<resources>
+    <dimen name="txt_medium">@dimen/_12ssp</dimen>
+    <dimen name="txt_large">@dimen/_35ssp</dimen>
+    <dimen name="txt_small">@dimen/_8ssp</dimen>
+    <dimen name="txt_extra_small">@dimen/_5ssp</dimen>
+    <dimen name="margin_and_padding">@dimen/_8sdp</dimen>
+    <dimen name="margin_and_padding_small">@dimen/_1sdp</dimen>
+    <dimen name="smallPic">@dimen/_25sdp</dimen>
+    <dimen name="mediumPic">@dimen/_35sdp</dimen>
+    <dimen name="card_corner">@dimen/_3sdp</dimen>
+    <dimen name="margin_big">@dimen/_15sdp</dimen>
+    <dimen name="_0dp">0dp</dimen>
+</resources>

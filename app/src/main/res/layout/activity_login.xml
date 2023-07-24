@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ubitc.popuppush.ui.login.LoginScreenViewModel" />
+        <import type="android.view.View"/>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_browse_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <com.ubitc.popuppush.views.player.PlayerView
+            android:id="@+id/mainLayerPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:tag="PlayerView"
+            android:visibility="gone"
+            app:resize_mode="fixed_height"
+            app:show_buffering="never"
+            app:use_controller="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_and_padding"
+            android:weightSum="2">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_0dp"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="3"/>
+
+            <LinearLayout
+                android:id="@+id/messages"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_0dp"
+                android:layout_gravity="center"
+                android:visibility="@{viewModel.gifVideoIntroDone ? View.VISIBLE : View.GONE}"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:text="@{viewModel.message , default = device_Code}"
+                    android:textColor="@color/lb_tv_white"
+                    android:textSize="@dimen/txt_medium" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_and_padding"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+
+                        android:gravity="start"
+                        android:text="@{viewModel.codeValue , default = 123456}"
+                        android:textColor="@color/lb_tv_white"
+                        android:textSize="@dimen/txt_large"
+                        android:textStyle="bold" />
+
+                    <com.ubitc.popuppush.views.loader.DotProgressBar
+                        android:id="@+id/progress_circular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:visibility="@{viewModel.visibilityOfProgress}"
+                        android:layout_marginStart="@dimen/margin_and_padding"
+                        android:paddingBottom="@dimen/margin_and_padding" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/margin_big"
+                    android:gravity="start"
+                    android:text="@{viewModel.description , default = device_Code}"
+                    android:textColor="@color/lb_tv_white"
+                    android:textSize="@dimen/txt_small" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <com.ubitc.popuppush.providers.downloadx.DownloaderRecyclerView
+            android:id="@+id/download_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/linear_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:padding="@dimen/margin_and_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="NestedWeights"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="@{viewModel.visibilityOfDeviceName}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deviceName"
+                    android:textColor="@color/lb_tv_white"
+                    android:textSize="@dimen/txt_extra_small"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/margin_and_padding_small"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.deviceNameValue}"
+                    android:textColor="@color/middle_blue"
+                    android:textSize="@dimen/txt_extra_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="@{viewModel.visibilityOfDeviceName}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deviceSerial"
+                    android:textColor="@color/lb_tv_white"
+                    android:textSize="@dimen/txt_extra_small"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/margin_and_padding_small"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.deviceSerialValue}"
+                    android:textColor="@color/middle_blue"
+                    android:textSize="@dimen/txt_extra_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="@{viewModel.visibilityOfUserName}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="@string/userName"
+                    android:textColor="@color/lb_tv_white"
+                    android:textSize="@dimen/txt_extra_small"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/margin_and_padding_small"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.userNameValue}"
+                    android:textColor="@color/middle_blue"
+                    android:textSize="@dimen/txt_extra_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="@{viewModel.visibilityOfCompanyName}"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="@string/company_name"
+                    android:textColor="@color/lb_tv_white"
+                    android:textSize="@dimen/txt_extra_small"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/margin_and_padding_small"
+
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.companyNameValue}"
+                    android:textColor="@color/middle_blue"
+                    android:textSize="@dimen/txt_extra_small" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="@dimen/margin_and_padding"
+            android:id="@+id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="@{viewModel.visibilityOfQrCode}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="@dimen/card_corner">
+            <ImageView
+                android:id="@+id/imageView_qr"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+
+                android:contentDescription="@string/description" />
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

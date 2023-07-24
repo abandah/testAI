@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.ubitc.popuppush.views.RotateLayout
+        android:id="@+id/rotateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_browse_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:keepScreenOn="true"
+            tools:context=".ui.test_activity.TestActivity"
+            tools:deviceIds="tv"
+            tools:ignore="MergeRootFrame">
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.ubitc.popuppush.views.main_layer.MainLayer
+                    android:id="@+id/mainLayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="Main Layer"
+                    />
+
+                <com.ubitc.popuppush.views.main_layer.MainLayer
+                    android:id="@+id/playgroundLayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="PlayGround Layer"
+                    app:resize_mode="fixed_height"
+                    app:show_buffering="never"
+                    app:use_controller="false" />
+
+                <com.ubitc.popuppush.views.main_layer.MainLayer
+                    android:id="@+id/cornerLayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="Corner Layer"
+                    app:resize_mode="fixed_height"
+                    app:show_buffering="never"
+                    app:use_controller="false" />
+
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.ubitc.popuppush.views.RotateLayout>
+
+</layout>

@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "824948116994",
+    "firebase_url": "https://popuppush-default-rtdb.firebaseio.com",
+    "project_id": "popuppush",
+    "storage_bucket": "popuppush.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824948116994:android:0b9843bb15e5e1cfb5e11b",
+        "android_client_info": {
+          "package_name": "com.abandah.popuppush"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824948116994-i4dhfab07g7egep3dkcnqb1fp40v6j9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuykR8rUeQl6sFTETIzb-PVO5Ay2zbrCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824948116994-i4dhfab07g7egep3dkcnqb1fp40v6j9q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824948116994:android:3f860d16ac063874b5e11b",
+        "android_client_info": {
+          "package_name": "com.ubitc.popuppush"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824948116994-i4dhfab07g7egep3dkcnqb1fp40v6j9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuykR8rUeQl6sFTETIzb-PVO5Ay2zbrCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824948116994-i4dhfab07g7egep3dkcnqb1fp40v6j9q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

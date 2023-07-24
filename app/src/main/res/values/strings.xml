@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">PopUpPush</string>
+
+
+
+    <!-- Info items titles -->
+    <string name="item_info_title_cpu_cores">Cores</string>
+    <string name="item_info_title_cpu_freq">Freq</string>
+    <string name="item_info_title_ram_available">Available RAM</string>
+    <string name="item_info_title_ram_total">Total RAM</string>
+    <string name="item_info_title_system_api_level">Api Level</string>
+
+    <string name="item_info_title_system_release_version">Release Version</string>
+    <string name="checking_Device"          >Checking device info </string>
+    <string name="check_permissions"       >Checking permissions </string>
+    <string name="saveMediaToDisk"          >Saving media into DB </string>
+    <string name="checking_Location"        >Fetching Location    </string>
+    <string name="checking_HDMI"            >Checking HDMI support</string>
+    <string name="check_channels"           >Checking Satellite   </string>
+    <string name="checking_youtube"         >Checking Youtube     </string>
+    <string name="updating_device_details"  >Updating device      </string>
+    <string name="get_Media_fromServer"     >Getting media        </string>
+    <string name="gettingDeviceInfo">Getting device info</string>
+    <string name="corner">Corner</string>
+    <string name="playground">PlayGround</string>
+    <string name="playlist">playList</string>
+    <string name="trying_to_connect_to_the_internet">Trying to connect to the internet</string>
+    <string name="ram">ram</string>
+    <string name="heap">Heap</string>
+    <string name="main_timer">main timer</string>
+    <string name="bug_list">bug List</string>
+    <string name="deviceName">Device name :</string>
+    <string name="deviceSerial">Device serial :</string>
+    <string name="company_name">Company name :</string>
+    <string name="userName">User name :</string>
+    <string name="NotStarted">not started</string>
+    <string name="waiting">Waiting</string>
+    <string name="failed">Failed</string>
+    <string name="stopped">Stopped</string>
+    <string name="succeed">Succeed</string>
+    <string name="DownloadedFilePic">downloaded file pic</string>
+    <string name="description">contentDescription</string>
+</resources>

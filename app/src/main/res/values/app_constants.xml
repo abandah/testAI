@@ -1,0 +1,11 @@
+<resources>
+    <string name="content_key">Content</string>
+    <string name="content_value">application/json; charset=utf-8</string>
+    <string name="accept_key">Accept</string>
+    <string name="accept_value">application/json</string>
+    <string name="authorization_key">Authorization</string>
+    <string name="authorization_bearer">Bearer</string>
+    <string name="no_internet">No Internet</string>
+    <string name="success">Success</string>
+    <string name="MB">MB</string>
+</resources>
